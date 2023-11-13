@@ -36,7 +36,7 @@ public class MainPageTest {
     @Test
     public void buttonVisibleAfter() {
         driver.get("https://demoqa.com/dynamic-properties");
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(3));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(1));
         wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.cssSelector("#visibleAfter"))));
         assertTrue(driver.findElement(By.cssSelector("#visibleAfter")).isDisplayed(), "Кнопка не появилась");
 
